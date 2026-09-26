@@ -28,7 +28,7 @@ Works on Vercel. Set `SOLANA_PRIVATE_KEY` and `SOLANA_RPC` in the project's Envi
 
 ## How it works
 
-- `POST /api/launch` uploads the image + metadata to pump.fun's IPFS endpoint, builds a `create_v2` instruction with the official `@pump-fun/pump-sdk` (plain SOL-quoted create, no modes), signs it with the deployer keypair plus a fresh mint keypair, and sends it through the Helius RPC.
+- `POST /api/launch` uploads the image + metadata to pump.fun's IPFS endpoint (every coin gets [https://x.com/noutilitytokens](https://x.com/noutilitytokens) as its Twitter/X social), builds a `create_v2` instruction with the official `@pump-fun/pump-sdk` (plain SOL-quoted create, no modes), signs it with the deployer keypair plus a fresh mint keypair, and sends it through the Helius RPC.
 - `GET /api/launch` returns the deployer address and balance.
 
 No database, no auth, no modes, no mercy.

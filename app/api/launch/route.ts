@@ -21,6 +21,8 @@ const METADATA_ENDPOINTS = [
   "https://frontend-api-v3.pump.fun/ipfs",
 ];
 
+const NUTS_X_URL = "https://x.com/noutilitytokens";
+
 const MAX_IMAGE_BYTES = 10 * 1024 * 1024;
 const MIN_BALANCE_SOL = 0.005;
 
@@ -55,6 +57,7 @@ async function uploadMetadata(
       form.append("name", name);
       form.append("symbol", symbol);
       form.append("description", "");
+      form.append("twitter", NUTS_X_URL);
       form.append("showName", "true");
       const res = await fetch(endpoint, { method: "POST", body: form });
       if (!res.ok) throw new Error(`metadata upload failed (${res.status})`);
